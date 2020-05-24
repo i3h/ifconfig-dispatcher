@@ -6,8 +6,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var Port string
-var API string
+var (
+	Port   string
+	API    string
+	Static string
+)
 
 type SimpleData struct {
 	Continent string  `json:"Continent"`
@@ -35,6 +38,11 @@ func main() {
 	API = os.Getenv("IFCONFIG_API")
 	if API == "" {
 		API = "http://localhost:3000"
+	}
+	// Set static path
+	Static = os.Getenv("IFCONFIG_STATIC")
+	if Static == "" {
+		Static = "./static"
 	}
 
 	r := gin.Default()

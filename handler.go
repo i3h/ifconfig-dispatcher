@@ -32,7 +32,7 @@ func Dispatcher(API string) gin.HandlerFunc {
 			PassToApi(c)
 		} else {
 			// Serve static resources for browser
-			file := "./static/" + c.Request.URL.Path
+			file := Static + "/" + c.Request.URL.Path
 			http.ServeFile(c.Writer, c.Request, file)
 		}
 	}
