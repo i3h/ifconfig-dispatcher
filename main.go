@@ -35,7 +35,7 @@ func main() {
 		Port = "5080"
 	}
 	// Set api endpoint
-	API = os.Getenv("IFCONFIG_API")
+	API = os.Getenv("IFCONFIGIS_API")
 	if API == "" {
 		API = "http://localhost:5000"
 	}
