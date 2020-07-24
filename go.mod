@@ -1,4 +1,4 @@
-module github.com/i3h/ifconfig-dispatcher
+module github.com/ifconfig-is/dispatcher
 
 go 1.13
 

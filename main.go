@@ -30,17 +30,17 @@ func init() {
 
 func main() {
 	// Set running port
-	Port = os.Getenv("IFCONFIG_DISPATCHER_PORT")
+	Port = os.Getenv("IFCONFIGIS_DISPATCHER_PORT")
 	if Port == "" {
-		Port = "3080"
+		Port = "5080"
 	}
 	// Set api endpoint
 	API = os.Getenv("IFCONFIG_API")
 	if API == "" {
-		API = "http://localhost:3000"
+		API = "http://localhost:5000"
 	}
 	// Set static path
-	Static = os.Getenv("IFCONFIG_STATIC")
+	Static = os.Getenv("IFCONFIGIS_STATIC")
 	if Static == "" {
 		Static = "./static"
 	}
